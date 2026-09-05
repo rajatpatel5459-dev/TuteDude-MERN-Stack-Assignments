@@ -1,0 +1,215 @@
+/* Reset default spacing */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f8fafc;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:white;
+    position:relative;
+}
+
+.logo{
+    font-size:28px;
+    color:#1e3a8a;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#475569;
+}
+
+.username-btn{
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+/* Hamburger button */
+
+.menu-btn{
+    display:none;
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/*
+Menu hidden by default
+
+menu button and menu are siblings.
+jab button focus karta hai to,
+menu becomes visible using + selector.
+*/
+
+.mobile-menu{
+    display:none;
+    position:absolute;
+    top:70px;
+    right:20px;
+    width:180px;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:12px;
+    text-decoration:none;
+    color:#334155;
+}
+
+.mobile-menu a:hover{
+    background:#f1f5f9;
+}
+
+/* Focus pseudo class */
+
+.menu-btn:focus + .mobile-menu{
+    display:block;
+}
+
+/* Hero Section */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px;
+}
+
+.hero-content{
+    width:50%;
+}
+
+.hero-content h1{
+    font-size:55px;
+    color:#334155;
+}
+
+.hero-content span{
+    color:#06b6d4;
+}
+
+.hero-content p{
+    margin-top:20px;
+    font-size:20px;
+    line-height:1.6;
+    color:#64748b;
+}
+
+.book-btn{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:10px;
+    background:#0891b2;
+    color:white;
+}
+
+.hero-image{
+    width:40%;
+    text-align:center;
+}
+
+.hero-image img{
+    width:400px;
+}
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    .nav-links a{
+        font-size:14px;
+    }
+
+    .username-btn{
+        font-size:14px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .hero-image img{
+        width:300px;
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .username-btn{
+        font-size:12px;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:30px 20px;
+    }
+
+    .hero-content{
+        width:100%;
+    }
+
+    .hero-image{
+        width:100%;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .hero-image img{
+        width:250px;
+    }
+}
