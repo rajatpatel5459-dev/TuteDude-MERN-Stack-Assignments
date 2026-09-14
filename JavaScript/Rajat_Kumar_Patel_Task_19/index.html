@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Service Booking App</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
+    <!-- NavBar -->
+    <nav class="navbar">
+
+        <div class="logo">🧺 Logo</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <span id="username">Username</span>
+            <button id="logout">Logout</button>
+        </div>
+
+    </nav>
+
+
+    <!-- Main Section -->
+    <div class="main-container">
+
+        <!-- Left Section -->
+        <div class="left-section">
+
+            <div class="cart-box">
+
+                <h2>Added Items</h2>
+
+                <table class="cart-table">
+
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cartBody">
+
+                        <tr id="emptyRow">
+                            <td colspan="3">
+
+                                <div class="empty-cart">
+
+                                    <i class="fa-solid fa-circle-info"></i>
+
+                                    <h3>No Items Added</h3>
+
+                                    <p>Add items to the cart from the services bar</p>
+
+                                </div>
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div class="total-box">
+                    <span>Total Amount</span>
+                    <span>₹ <span id="totalPrice">0</span></span>
+                </div>
+
+            </div>
+
+
+            <div class="booking-box">
+
+                <h2>Book Now</h2>
+
+                <form id="bookingForm">
+
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe">
+
+                    <div class="form-row">
+
+                        <div>
+                            <label>Email ID</label>
+                            <input type="email" id="email" placeholder="John@gmail.com">
+                        </div>
+
+                        <div>
+                            <label>Password</label>
+                            <input type="password" id="password" placeholder="0000000000">
+                        </div>
+
+                    </div>
+
+                    <button type="submit" id="bookBtn">Book now</button>
+
+                    <p id="message"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+       <!-- Right Section -->
+        <div class="right-section">
+
+            <h2>Browse Our Services</h2>
+
+            <p class="desc">Click on the add to cart button to add the services to your cart or press skip</p>
+
+            <hr>
+
+            <div id="serviceContainer">
+                <!-- current service card gets added here by JS -->
+            </div>
+
+            <hr>
+
+            <p class="note">
+                <i class="fa-solid fa-circle-info"></i>
+                Add the items to the cart and book now
+            </p>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
